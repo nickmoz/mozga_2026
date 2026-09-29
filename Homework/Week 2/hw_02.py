@@ -2,17 +2,21 @@
 # F = (C * 9/5) + 32
 # C = (F - 32)/1.8
 
-import math
 import random
-celsius = float(input("Temperature (C): "))
+unit = input('What unit? (C/F): ')
 
+if unit == 'C':
+    temp = float(input('Enter Temperature in C: '))
+    fahrenheit = (temp * 9/5) + 32
+    print(f'{fahrenheit}')
 
-def celsius_to_fahrenheit(celsius):
-    fahrenheit = (celsius * 9/5) + 32
-    return fahrenheit
+elif unit == 'F':
+    temp = float(input('Enter Temperature in F: '))
+    celsius = (temp - 32) / 1.8
+    print(f'{celsius}')
 
-
-print(f"{celsius_to_fahrenheit(celsius)}")
+else:
+    print('Error')
 
 # **********************************************************************************#
 
@@ -33,7 +37,6 @@ def factorial(n):
 print(factorial(n))
 
 # **********************************************************************************#
-
 
 numbers1 = []
 
